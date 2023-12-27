@@ -8,6 +8,10 @@ public class InputScript : MonoBehaviour
     public Action SpaceAction;
     //public Action<Vector2> MouseMovement;
     public BaseElectronicController ElectronicController;
+
+    public PuzzleController puzzleController;
+
+    public 
     void Start()
     {
         
@@ -18,11 +22,36 @@ public class InputScript : MonoBehaviour
     {
         SpaceCheck();
         MouseScrollCheck();
+        PuzzleMod();
+        
     }
 
 
 
+    void PuzzleMod()
+    {
+        Mousebutton0f();
+        MouseDrag();
+    }
 
+    void Mousebutton0f()
+    {
+        if(Input.GetMouseButtonDown(0))
+        {
+            puzzleController.TryToHoldAPuzzlePiece();
+        }
+
+        if(Input.GetMouseButtonUp(0))
+        {
+            puzzleController.TryToStopDrag();
+        }
+    }
+
+    private void MouseDrag()
+    {
+        puzzleController.TryDrag(new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y")));
+        
+    }
     void SpaceCheck()
     {
         if (Input.GetKeyDown(KeyCode.Space))
