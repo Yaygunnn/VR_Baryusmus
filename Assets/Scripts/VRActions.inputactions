@@ -1,0 +1,54 @@
+{
+    "name": "VRActions",
+    "maps": [
+        {
+            "name": "VR",
+            "id": "309be932-9f9e-4b6a-b7b2-58b291c03ccc",
+            "actions": [
+                {
+                    "name": "ThumbStick",
+                    "type": "Value",
+                    "id": "d43436b1-45e4-480a-aff8-398466f2c38a",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "K",
+                    "type": "Button",
+                    "id": "1b626d47-dc21-4f17-b4a1-c49df08090ed",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "54bb8f59-b898-44c0-acd3-8172d431a62c",
+                    "path": "<XRController>{RightHand}/primary2DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ThumbStick",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "77e7b094-4bb3-4bff-814c-5487a23cb986",
+                    "path": "<Keyboard>/k",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "K",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

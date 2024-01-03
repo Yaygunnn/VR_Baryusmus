@@ -28,6 +28,8 @@ public class ElectronicManagerController
     public void AddToTheAllElectronicList(BaseElectronicController baseElectronic)
     {
         model.AllElectronics.Add(baseElectronic);
+
+        
     }
     
     public void ChangeToARandomElectronic()
@@ -58,7 +60,10 @@ public class ElectronicManagerController
     {
         model.CurrentElectronicController = baseElectronic;
         model.CurrentElectronicController.TakenControl();
-        ChangeInputElectronic();
+
+        model.electCalculateController.SetNewCurrentBaseElectronic(baseElectronic, model.AllElectronics);
+
+        //ChangeInputElectronic();
     }
 
     private void ChangeInputElectronic()
@@ -71,5 +76,10 @@ public class ElectronicManagerController
         {
             model.CurrentElectronicController.LostControl();
         }
+    }
+
+    public void SetElectCalculateController(ElectCalculateController controller)
+    {
+        model.electCalculateController=controller;
     }
 }

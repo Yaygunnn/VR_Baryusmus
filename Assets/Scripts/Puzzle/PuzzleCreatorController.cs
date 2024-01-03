@@ -7,7 +7,7 @@ public class PuzzleCreatorController : MonoBehaviour
     [SerializeField] private PuzzleCreatorModel model;
     void Start()
     {
-        CreatePuzzle();
+        GameMod.Instance.PuzzleModStart += CreateNewPuzzle;
     }
 
     
@@ -16,13 +16,16 @@ public class PuzzleCreatorController : MonoBehaviour
         
     }
 
-    void CreatePuzzle()
+    void CreateNewPuzzle()
     {
+        DestroyPreviousPuzzle();
         foreach(St_PuzzlePos block in model.PuzzlePosList)
         {
             GameObject piece;
 
             piece = CreatePuzzleBlock(block);
+
+            model.PuzzlePieces.Add(piece);
 
             SetPuzzleBlockPosition(block, piece);
             
@@ -30,6 +33,14 @@ public class PuzzleCreatorController : MonoBehaviour
         }
     }
 
+    private void DestroyPreviousPuzzle()
+    {
+        foreach(GameObject piece in model.PuzzlePieces)
+        {
+            Destroy(piece);
+        }
+        model.PuzzlePieces.Clear();
+    }
     private void SetHorizontal(St_PuzzlePos block, BasePuzzleDragable basePuzzleDragable)
     {
         basePuzzleDragable.IsHorizontal(block.IsHorizontal);

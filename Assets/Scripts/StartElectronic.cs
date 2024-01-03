@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DevTest : MonoBehaviour
+public class StartElectronic : MonoBehaviour
 {
-    [SerializeField] GameFactory gameFactory;
+    
     [SerializeField] BaseElectronicController StartDevice;
     void Start()
     {

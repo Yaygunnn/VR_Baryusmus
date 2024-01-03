@@ -9,4 +9,8 @@ public class ElectronicManagerModel
     public List<BaseElectronicController> AllElectronics=new List<BaseElectronicController>();
 
     public InputScript inputScript;
+
+    public ElectCalculateController electCalculateController;
+
+    
 }

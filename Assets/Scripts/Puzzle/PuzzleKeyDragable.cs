@@ -20,8 +20,11 @@ public class PuzzleKeyDragable : BasePuzzleDragable
     {
         Debug.Log("Gönderdim");
         //GetComponentInParent<IPuzzleSuccess>().PuzzleSuccess();
-        PuzzleSuccessor.CallSucces.PuzzleSuccess();
-        Achieved = true;
+        if (PuzzleSuccessor.CallSucces != null)
+        {
+            PuzzleSuccessor.CallSucces.PuzzleSuccess();
+            Achieved = true;
+        }
     }
     private void ControlSuccess(float value)
     {

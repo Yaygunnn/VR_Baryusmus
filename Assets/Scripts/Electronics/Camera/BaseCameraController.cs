@@ -7,7 +7,7 @@ public class BaseCameraController : BaseElectronicController
     private void Start()
     {
         base.Start();
-        SetRotation();
+        
         
     }
     private void Update()
@@ -16,8 +16,10 @@ public class BaseCameraController : BaseElectronicController
     public override void TakenControl()
     {
         GetComponent<Renderer>().enabled = false;
+
+        TeleportPlayer(this.transform);
         
-        SetCameraTransform();
+        //SetCameraTransform();
     }
 
     public override void LostControl()
@@ -25,13 +27,14 @@ public class BaseCameraController : BaseElectronicController
         GetComponent<Renderer>().enabled = true;
     }
 
-    private void SetCameraTransform()
+    private void SetCameraTransform()// keyboard mouse
     {
         Camera camera = Camera.main;
         camera.transform.position = this.transform.position;
         camera.transform.rotation = this.transform.rotation;
     }
 
+    
     public override void MouseMovementX(float mouseX)
     {
  
@@ -47,10 +50,5 @@ public class BaseCameraController : BaseElectronicController
     }
 
 
-    private void SetRotation()
-    {
-        Quaternion rotation = transform.rotation;
-        rotation.x += 0.01f;
-        transform.rotation = rotation;
-    }
+    
 }

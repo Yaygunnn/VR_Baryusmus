@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BaseElectronicController : MonoBehaviour
 {
-
+    
     public void Start()
     {
         ElectronicManagerController.Instance.AddToTheAllElectronicList(this);
@@ -28,6 +28,16 @@ public class BaseElectronicController : MonoBehaviour
     public virtual void MouseMovementY(float mouseY)
     {
 
+    }
+
+    protected virtual void TeleportPlayer(Transform ttransform)
+    {
+        if (GameModel.Instance.Player == null)
+        {
+            Debug.Log("Oyuncun yok");
+        }
+        GameModel.Instance.Player.transform.position = ttransform.position;
+        GameModel.Instance.Player.transform.rotation = ttransform.rotation;
     }
 
 }
