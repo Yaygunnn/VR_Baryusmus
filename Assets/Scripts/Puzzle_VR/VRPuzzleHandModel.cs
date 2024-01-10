@@ -21,7 +21,7 @@ public class VRPuzzleHandModel : MonoBehaviour
     public bool Draging;
 
 
-    public VR_InputReciever VRInput;
+    
     void Start()
     {
         

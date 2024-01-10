@@ -48,17 +48,13 @@ public class HackReady: IPuzzleSuccess
         {
             if(HackIsReady)
             {
-        Debug.Log("trig");
+        
                 GameMod.Instance.OpenPuzzle();
                 PuzzleSuccessor.CallSucces = this;
             }
         }
     }
 
-    public void UnifyInput()
-    {
-        vR_InputReciever.RightTrigger = TryStartHack;
-    }
-
+    
     
 }

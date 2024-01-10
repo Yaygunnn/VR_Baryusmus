@@ -15,5 +15,5 @@ public class ElectCalculateModel : MonoBehaviour
 
 
     
-    [HideInInspector] public float MinNecessaryDegre = 5;
+    public float MinNecessaryDegre = 5;
 }

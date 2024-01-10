@@ -8,10 +8,14 @@ public class VR_InputReciever : MonoBehaviour
 {
     [SerializeField] public InputActionReference ThumbStick2d;
     public Vector2 ThumbStick;
-    [SerializeField] public InputActionReference Trigger1d;
+    [SerializeField] private InputActionReference RightTriggerButton;
+    [SerializeField] private InputActionReference LeftTriggerButton;
 
     public Action RightTrigger;
     public Action RightTriggerCancell;
+
+    public Action LeftTrigger;
+    public Action LeftTriggerCancell;
     void Start()
     {
         
@@ -50,15 +54,36 @@ public class VR_InputReciever : MonoBehaviour
         }
     }
 
+    private void FLeftTrigger(InputAction.CallbackContext value)
+    {
+        if (LeftTrigger != null)
+        {
+
+            LeftTrigger();
+        }
+    }
+
+    private void FLeftTriggerCancell(InputAction.CallbackContext value)
+    {
+        if (LeftTriggerCancell != null)
+        {
+            LeftTriggerCancell();
+        }
+    }
+
     private void OnEnable()
     {
-        Trigger1d.action.started += FRightTrigger;
-        Trigger1d.action.canceled += FRightTriggerCancell;
+        RightTriggerButton.action.started += FRightTrigger;
+        RightTriggerButton.action.canceled += FRightTriggerCancell;
+        LeftTriggerButton.action.started += FLeftTrigger;
+        LeftTriggerButton.action.canceled += FLeftTriggerCancell;
     }
 
     private void OnDisable()
     {
-        Trigger1d.action.started -= FRightTrigger;
-        Trigger1d.action .canceled -= FRightTriggerCancell;
+        RightTriggerButton.action.started -= FRightTrigger;
+        RightTriggerButton.action .canceled -= FRightTriggerCancell;
+        LeftTriggerButton.action.started -= FLeftTrigger;
+        LeftTriggerButton.action.canceled -= FLeftTriggerCancell;
     }
 }

@@ -89,7 +89,7 @@ public class ElectCalculateController : MonoBehaviour
 
         if (mindegre < model.MinNecessaryDegre)
         {
-            Debug.Log("Min degre is " + mindegre + "Necessery min is " + model.MinNecessaryDegre);
+            //Debug.Log("Min degre is " + mindegre + "Necessery min is " + model.MinNecessaryDegre);
             IDegreElectronic iDegreElectronic = minElectronicDevice.GetComponent<IDegreElectronic>();
             if (iDegreElectronic != null)
             {

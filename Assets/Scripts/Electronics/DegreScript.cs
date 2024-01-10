@@ -23,7 +23,7 @@ public class DegreScript : MonoBehaviour, IDegreElectronic
 
     public void InHackDegre()
     {
-        Debug.Log("hackable");
+        //Debug.Log("hackable");
         ChangeColorToGreen();
     }
 

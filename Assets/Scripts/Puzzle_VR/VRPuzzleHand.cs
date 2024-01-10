@@ -6,10 +6,7 @@ public class VRPuzzleHand : MonoBehaviour
 {
     [SerializeField] VRPuzzleHandModel model;
 
-    private void Awake()
-    {
-        AddToPuzzleModeOn();
-    }
+    
 
     private void Update()
     {
@@ -77,12 +74,12 @@ public class VRPuzzleHand : MonoBehaviour
     }
     private void StartDrag()
     {
-        Debug.Log("FoundPuzzle");
+        //Debug.Log("FoundPuzzle");
         model.PreviousHandPos=model.Hand.position;
         model.Draging = true;
     }
 
-    private void TryStopDrag()
+    public void TryStopDrag()
     {
         
         model.Draging=false;
@@ -97,20 +94,12 @@ public class VRPuzzleHand : MonoBehaviour
         return new Vector2((model.Hand.position.x - model.PreviousHandPos.x) * model.DragSpeedX, (model.Hand.position.y - model.PreviousHandPos.y) * model.DragSpeedY);
     }
 
-    private void AddToPuzzleModeOn()
-    {
-        GameMod.Instance.PuzzleModStart += ConnectWithPuzzle;
-        
-    }
-    private void SearchPuzzlePiece()
+    
+    public void SearchPuzzlePiece()
     {
         FoundObjectBehingHand();
     }
-    private void ConnectWithPuzzle()
-    {
-        model.VRInput.RightTrigger = SearchPuzzlePiece;
-        model.VRInput.RightTriggerCancell = TryStopDrag;
-    }
+    
 
     
 }
