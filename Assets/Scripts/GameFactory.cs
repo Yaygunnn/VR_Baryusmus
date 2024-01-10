@@ -12,6 +12,7 @@ public class GameFactory : MonoBehaviour
     [SerializeField] private PuzzleRoomModel puzzleRoomModel;
     [SerializeField] private GameObject Player;
     [SerializeField] private ElectCalculateController electCalculateController;
+    [SerializeField] private Camera PlayerCamera;
     
     void Awake()
     {
@@ -21,7 +22,7 @@ public class GameFactory : MonoBehaviour
  
         puzzleRoomModel.Player = Player;
         ElectronicManagerController.Instance.SetElectCalculateController(electCalculateController);
-        GameModel.Instance.SetValues(Player);
+        GameModel.Instance.SetValues(Player, PlayerCamera);
         HackReady.Instance.vR_InputReciever = vR_InputReciever;
 
 

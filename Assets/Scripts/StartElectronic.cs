@@ -6,9 +6,14 @@ public class StartElectronic : MonoBehaviour
 {
     
     [SerializeField] BaseElectronicController StartDevice;
-    void Start()
+
+    private void Awake()
     {
         StartWithSelectedElectronic();
+        
+    }
+    void Start()
+    {
     }
 
     // Update is called once per frame

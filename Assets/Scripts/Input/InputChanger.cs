@@ -6,7 +6,7 @@ using UnityEngine.Windows;
 
 public class InputChanger 
 {
-
+    
 
     public VRPuzzleHand RightHand;
     public VRPuzzleHand LeftHand;
@@ -14,6 +14,8 @@ public class InputChanger
     private HackReady hackReady = HackReady.Instance;
 
     public VR_InputReciever vR_InputReciever;
+
+    private BaseElectronicController baseElectronicController;
 
     public InputChanger(VRPuzzleHand rightHand, VRPuzzleHand leftHand, VR_InputReciever inputreciever)
     {
@@ -35,8 +37,11 @@ public class InputChanger
     public void ElectronicModStart()
     {
         Nulify();
+        GetElectronicDevice();
         vR_InputReciever.RightTrigger = hackReady.TryStartHack;
         vR_InputReciever.LeftTrigger = hackReady.TryStartHack;
+
+        vR_InputReciever.LeftAnalog2d = baseElectronicController.LeftAnalog2D;
 
     }
 
@@ -46,5 +51,11 @@ public class InputChanger
         vR_InputReciever.RightTriggerCancell = null;
         vR_InputReciever.LeftTrigger = null;
         vR_InputReciever.LeftTriggerCancell = null;
+        vR_InputReciever.LeftAnalog2d = null;
+    }
+
+    private void GetElectronicDevice()
+    {
+        baseElectronicController = ElectronicManagerController.Instance.GetCurrentElectronicDevice();
     }
 }

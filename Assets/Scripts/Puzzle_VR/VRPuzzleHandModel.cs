@@ -21,6 +21,17 @@ public class VRPuzzleHandModel : MonoBehaviour
     public bool Draging;
 
 
+    public float MinNecesseryCloseDistance = 0.3f;
+
+    public float minPuzzleDistance;
+
+    
+
+    
+
+    
+
+
     
     void Start()
     {

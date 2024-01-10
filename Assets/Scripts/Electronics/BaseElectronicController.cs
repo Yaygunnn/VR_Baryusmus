@@ -20,6 +20,10 @@ public class BaseElectronicController : MonoBehaviour
 
     }
 
+    public virtual void LeftAnalog2D(Vector2 axis)
+    {
+
+    }
     public virtual void MouseMovementX(float mouseX)
     {
 

@@ -5,7 +5,7 @@ using UnityEngine;
 public class VRPuzzleHand : MonoBehaviour
 {
     [SerializeField] VRPuzzleHandModel model;
-
+    [SerializeField] GameObject a;
     
 
     private void Update()
@@ -47,6 +47,11 @@ public class VRPuzzleHand : MonoBehaviour
 
             else
             {
+               /* ray.GetPoint(hit.distance * 0.99f);
+                a.transform.position = hit.point + hit.normal * 0.5f;*/
+
+                TryToReachADragable((hit.point + hit.normal * 0.5f), hit.collider.transform);
+                
                 ShowHandAndSetPosition();
             }
         }
@@ -62,6 +67,47 @@ public class VRPuzzleHand : MonoBehaviour
         /*model.LocationShowHand.SetActive(true);*/
     }
 
+    private void TryToReachADragable(Vector3 Origin, Transform transformm)
+    {
+        model.minPuzzleDistance=float.MaxValue;
+        
+                         
+        TryToFindCloseDragable(new Ray(Origin, transformm.up));
+        TryToFindCloseDragable(new Ray(Origin, transformm.up * (-1)));
+        TryToFindCloseDragable(new Ray(Origin, transformm.right * (-1)));
+        TryToFindCloseDragable(new Ray(Origin, transformm.right));
+
+        if (model.basePuzzleDragable != null)
+        {
+            StartDrag();
+            HideHand();
+        }
+
+    }
+
+  
+    private void TryToFindCloseDragable(Ray ray)
+    {
+       
+        RaycastHit hitt;
+        model.basePuzzleDragable = null;
+        if (Physics.Raycast(ray, out hitt, model.MinNecesseryCloseDistance))
+        {
+            BasePuzzleDragable puzzlepiece = hitt.collider.GetComponent<BasePuzzleDragable>();
+
+            if(puzzlepiece != null)
+            {
+                if(model.minPuzzleDistance>hitt.distance)
+                {
+                    model.minPuzzleDistance = hitt.distance;
+                    
+                    model.basePuzzleDragable = puzzlepiece;
+                }               
+            }
+        }
+            
+    }
+
     private void ShowHandAndSetPosition()
     {
        /* ShowHand();
@@ -70,7 +116,7 @@ public class VRPuzzleHand : MonoBehaviour
 
     private void HideHand()
     {
-        model.LocationShowHand.SetActive(false);
+        //model.LocationShowHand.SetActive(false);
     }
     private void StartDrag()
     {

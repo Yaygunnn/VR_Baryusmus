@@ -20,9 +20,13 @@ public class GameModel
 
     public GameObject Player { get; private set; }
 
+    public Camera camera { get; private set; }
 
-    public void SetValues(GameObject player)
+
+    public void SetValues(GameObject player, Camera cam)
     {
         Player = player;
+
+        camera = cam;
     }
 }

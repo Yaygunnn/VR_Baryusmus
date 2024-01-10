@@ -78,6 +78,10 @@ public class ElectronicManagerController
         }
     }
 
+    public BaseElectronicController GetCurrentElectronicDevice()
+    {
+        return model.CurrentElectronicController;   
+    }
     public void SetElectCalculateController(ElectCalculateController controller)
     {
         model.electCalculateController=controller;

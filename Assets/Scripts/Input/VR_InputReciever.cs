@@ -6,13 +6,15 @@ using UnityEngine.InputSystem;
 
 public class VR_InputReciever : MonoBehaviour
 {
-    [SerializeField] public InputActionReference ThumbStick2d;
+    [SerializeField] public InputActionReference ThumbStickLeft2d;
     public Vector2 ThumbStick;
     [SerializeField] private InputActionReference RightTriggerButton;
     [SerializeField] private InputActionReference LeftTriggerButton;
 
     public Action RightTrigger;
     public Action RightTriggerCancell;
+
+    public Action <Vector2> LeftAnalog2d;
 
     public Action LeftTrigger;
     public Action LeftTriggerCancell;
@@ -24,8 +26,10 @@ public class VR_InputReciever : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        FLeftAnalog();
+
         //Debug.Log(Trigger1d.action.ReadValue<float>());
+        //Debug.Log(ThumbStickLeft2d.action.ReadValue<Vector2>());
     }
 
 
@@ -33,7 +37,16 @@ public class VR_InputReciever : MonoBehaviour
 
     private void SetThumbStick()
     {
-        ThumbStick = ThumbStick2d.action.ReadValue<Vector2>();
+        ThumbStick = ThumbStickLeft2d.action.ReadValue<Vector2>();
+    }
+
+    private void FLeftAnalog()
+    {
+        if(LeftAnalog2d != null)
+        {
+            LeftAnalog2d(ThumbStickLeft2d.action.ReadValue<Vector2>());
+            Debug.Log(ThumbStickLeft2d.action.ReadValue<Vector2>());
+        }
     }
 
 
