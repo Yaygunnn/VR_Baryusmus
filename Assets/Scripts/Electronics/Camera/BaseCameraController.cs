@@ -15,7 +15,7 @@ public class BaseCameraController : BaseElectronicController
     }
     public override void TakenControl()
     {
-        GetComponent<Renderer>().enabled = false;
+        //GetComponent<Renderer>().enabled = false;
 
         TeleportPlayer(this.transform);
         
@@ -24,7 +24,7 @@ public class BaseCameraController : BaseElectronicController
 
     public override void LostControl()
     {
-        GetComponent<Renderer>().enabled = true;
+        //GetComponent<Renderer>().enabled = true;
     }
 
     private void SetCameraTransform()// keyboard mouse

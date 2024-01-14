@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class GameFactory : MonoBehaviour
 {
-    [SerializeField] private InputScript inputScript;
-    [SerializeField] private PuzzleController puzzleController;
+    //[SerializeField] private InputScript inputScript;
+    //[SerializeField] private PuzzleController puzzleController;
     [SerializeField] private VR_InputReciever vR_InputReciever;
     [SerializeField] private VRPuzzleHand vRP_RightHandModel;
     [SerializeField] private VRPuzzleHand vRP_LeftHandModel;

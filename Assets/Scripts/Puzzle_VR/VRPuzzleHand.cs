@@ -5,7 +5,7 @@ using UnityEngine;
 public class VRPuzzleHand : MonoBehaviour
 {
     [SerializeField] VRPuzzleHandModel model;
-    [SerializeField] GameObject a;
+    [SerializeField] GameObject anesne;
     
 
     private void Update()
