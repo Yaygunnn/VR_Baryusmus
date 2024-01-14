@@ -45,7 +45,7 @@ public class VR_InputReciever : MonoBehaviour
         if(LeftAnalog2d != null)
         {
             LeftAnalog2d(ThumbStickLeft2d.action.ReadValue<Vector2>());
-            Debug.Log(ThumbStickLeft2d.action.ReadValue<Vector2>());
+            
         }
     }
 
