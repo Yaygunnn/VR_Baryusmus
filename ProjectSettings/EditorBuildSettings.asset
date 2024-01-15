@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/StartMenu.unity
     guid: f7d3be74e35ac9048a4f18c148c61054
   - enabled: 1
-    path: Assets/Scenes/VR_Test.unity
-    guid: 827ad2f1a5b884c4e824137f35bb3776
+    path: Assets/Scenes/Level+Env.unity
+    guid: e1f1e004c9d104544b9dfb0e1201073d
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: ca33ec2618da87744acdfe451a310bec, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 468fc2315f95e77448f44551a56ce129, type: 2}

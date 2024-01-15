@@ -11,7 +11,7 @@ PrefabInstance:
     - target: {fileID: 2071046473940510719, guid: 4288bfd8b1e39c54e938c29eee2bc0ec, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: c52124ecd3fc93044bfb6247929a7ff9, type: 2}
+      objectReference: {fileID: 2100000, guid: e563d2611df3e984e92203420188c3ee, type: 2}
     - target: {fileID: 2071046475048890980, guid: 4288bfd8b1e39c54e938c29eee2bc0ec, type: 3}
       propertyPath: m_Name
       value: PuzzleKey
@@ -74,6 +74,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2071046475048890982, guid: 4288bfd8b1e39c54e938c29eee2bc0ec, type: 3}
+    - {fileID: -8881147395912828474, guid: 4288bfd8b1e39c54e938c29eee2bc0ec, type: 3}
+    - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:

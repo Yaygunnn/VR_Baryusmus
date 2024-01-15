@@ -19,6 +19,7 @@ public class PuzzleRoomController : MonoBehaviour
 
     private void PuzzleModOpen()
     {
+        //ShaderOpen.Instance.OpenShaderMode();
         TeleportPlayer();
     }
 
