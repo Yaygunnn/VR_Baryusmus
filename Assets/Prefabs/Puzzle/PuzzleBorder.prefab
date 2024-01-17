@@ -761,8 +761,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9054702473270884767}
-  m_LocalRotation: {x: -0, y: -0.18197455, z: -0, w: 0.98330325}
-  m_LocalPosition: {x: -4.28, y: 5.53, z: -4.73}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -774,8 +774,8 @@ Transform:
   - {fileID: 7369289375535974769}
   - {fileID: 1984569836156708432}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: -20.97, z: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5988694466601704170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -801,6 +801,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a7aeb9fb278efd4fad2d598baf27cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzlePieces: []
   PuzzlePiece1: {fileID: 2213248861263308501, guid: 56cfe9a2d3d58ef4ba65e0c6c6c98fa3, type: 3}
   PuzzlePiece2: {fileID: 2071046475048890980, guid: 4288bfd8b1e39c54e938c29eee2bc0ec, type: 3}
   PuzzlePiece3: {fileID: 2474479584815707037, guid: f41788a9ac5914e4a86ed3c87c36122d, type: 3}
@@ -810,6 +811,7 @@ MonoBehaviour:
     x: 1
     y: 2
     IsHorizontal: 1
+  puzzleCollection: {fileID: 11400000, guid: 86d5f4fc6d828a543bb493b86dfd6820, type: 2}
 --- !u!114 &6613941415116178030
 MonoBehaviour:
   m_ObjectHideFlags: 0

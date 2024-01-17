@@ -16,8 +16,9 @@ public class PuzzleCreatorController : MonoBehaviour
         
     }
 
-    void CreateNewPuzzle()
+    public void CreateNewPuzzle()
     {
+        SelectRandomPuzzle();  // Test sýrasýnda bunu coment yap
         DestroyPreviousPuzzle();
         foreach(St_PuzzlePos block in model.PuzzlePosList)
         {
@@ -33,6 +34,11 @@ public class PuzzleCreatorController : MonoBehaviour
         }
     }
 
+    private void SelectRandomPuzzle()
+    {
+        int RandomSayi = Random.Range(0,model.puzzleCollection.puzzles.Count);
+        model.PuzzlePosList = model.puzzleCollection.puzzles[RandomSayi].puzzleVersion;
+    }
     private void DestroyPreviousPuzzle()
     {
         foreach(GameObject piece in model.PuzzlePieces)

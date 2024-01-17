@@ -17,7 +17,9 @@ public class PuzzleCreatorModel :MonoBehaviour
 
     [SerializeField] public GameObject PuzzleKey;
 
-    [SerializeField] public List<St_PuzzlePos> PuzzlePosList;
+    [HideInInspector] public List<St_PuzzlePos> PuzzlePosList;
+
+    [SerializeField] public  PuzzleCollection puzzleCollection;
 
     
 }

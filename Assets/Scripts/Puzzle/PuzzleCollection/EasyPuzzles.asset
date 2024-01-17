@@ -1,0 +1,204 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0cf1aeb7dc11e344a44069f44eef29b, type: 3}
+  m_Name: EasyPuzzles
+  m_EditorClassIdentifier: 
+  puzzles:
+  - puzzleVersion:
+    - PieceType: 3
+      x: 0
+      y: 2
+      IsHorizontal: 1
+    - PieceType: 2
+      x: 0
+      y: 0
+      IsHorizontal: 1
+    - PieceType: 2
+      x: 2
+      y: 1
+      IsHorizontal: 0
+    - PieceType: 2
+      x: 0
+      y: 5
+      IsHorizontal: 1
+    - PieceType: 2
+      x: 5
+      y: 0
+      IsHorizontal: 0
+    - PieceType: 1
+      x: 0
+      y: 3
+      IsHorizontal: 0
+    - PieceType: 1
+      x: 4
+      y: 4
+      IsHorizontal: 0
+    - PieceType: 1
+      x: 4
+      y: 3
+      IsHorizontal: 1
+  - puzzleVersion:
+    - PieceType: 3
+      x: 0
+      y: 2
+      IsHorizontal: 1
+    - PieceType: 2
+      x: 2
+      y: 0
+      IsHorizontal: 0
+    - PieceType: 2
+      x: 3
+      y: 0
+      IsHorizontal: 0
+    - PieceType: 1
+      x: 4
+      y: 0
+      IsHorizontal: 1
+    - PieceType: 1
+      x: 4
+      y: 1
+      IsHorizontal: 0
+    - PieceType: 1
+      x: 1
+      y: 3
+      IsHorizontal: 0
+    - PieceType: 1
+      x: 2
+      y: 4
+      IsHorizontal: 1
+    - PieceType: 1
+      x: 4
+      y: 3
+      IsHorizontal: 0
+  - puzzleVersion:
+    - PieceType: 3
+      x: 1
+      y: 2
+      IsHorizontal: 1
+    - PieceType: 1
+      x: 0
+      y: 1
+      IsHorizontal: 0
+    - PieceType: 1
+      x: 0
+      y: 3
+      IsHorizontal: 1
+    - PieceType: 1
+      x: 2
+      y: 3
+      IsHorizontal: 1
+    - PieceType: 1
+      x: 3
+      y: 1
+      IsHorizontal: 0
+    - PieceType: 2
+      x: 4
+      y: 1
+      IsHorizontal: 0
+    - PieceType: 1
+      x: 5
+      y: 1
+      IsHorizontal: 0
+    - PieceType: 1
+      x: 1
+      y: 4
+      IsHorizontal: 0
+    - PieceType: 1
+      x: 2
+      y: 4
+      IsHorizontal: 0
+    - PieceType: 1
+      x: 3
+      y: 5
+      IsHorizontal: 1
+    - PieceType: 2
+      x: 3
+      y: 4
+      IsHorizontal: 1
+  - puzzleVersion:
+    - PieceType: 3
+      x: 0
+      y: 2
+      IsHorizontal: 1
+    - PieceType: 1
+      x: 2
+      y: 0
+      IsHorizontal: 0
+    - PieceType: 1
+      x: 3
+      y: 0
+      IsHorizontal: 0
+    - PieceType: 1
+      x: 2
+      y: 2
+      IsHorizontal: 0
+    - PieceType: 1
+      x: 3
+      y: 2
+      IsHorizontal: 0
+    - PieceType: 1
+      x: 0
+      y: 4
+      IsHorizontal: 0
+    - PieceType: 1
+      x: 1
+      y: 4
+      IsHorizontal: 0
+    - PieceType: 1
+      x: 5
+      y: 1
+      IsHorizontal: 0
+    - PieceType: 1
+      x: 0
+      y: 3
+      IsHorizontal: 1
+    - PieceType: 1
+      x: 2
+      y: 4
+      IsHorizontal: 1
+    - PieceType: 2
+      x: 4
+      y: 2
+      IsHorizontal: 0
+  - puzzleVersion:
+    - PieceType: 3
+      x: 0
+      y: 2
+      IsHorizontal: 1
+    - PieceType: 1
+      x: 0
+      y: 3
+      IsHorizontal: 1
+    - PieceType: 1
+      x: 2
+      y: 5
+      IsHorizontal: 1
+    - PieceType: 1
+      x: 1
+      y: 4
+      IsHorizontal: 0
+    - PieceType: 1
+      x: 2
+      y: 1
+      IsHorizontal: 0
+    - PieceType: 1
+      x: 2
+      y: 3
+      IsHorizontal: 0
+    - PieceType: 2
+      x: 3
+      y: 1
+      IsHorizontal: 0
+    - PieceType: 2
+      x: 4
+      y: 1
+      IsHorizontal: 0
