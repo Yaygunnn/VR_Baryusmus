@@ -54,7 +54,7 @@ public class CleanerRobotController : BaseElectronicController
     private void CameratransformManagement()
     {
         TeleportPlayer(model.CameraLocation);
-        GameModel.Instance.Player.transform.SetParent(model.CameraLocation, false);
+        GameModel.Instance.Player.transform.SetParent(model.CameraLocation, true);
     }
 
     public override void LostControl()
