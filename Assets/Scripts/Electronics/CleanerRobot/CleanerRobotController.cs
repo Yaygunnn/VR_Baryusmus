@@ -16,11 +16,25 @@ public class CleanerRobotController : BaseElectronicController
     
     void Update()
     {
-        Movement();
+        //EskiMovement();
+        SetRotation();
     }
 
-
-    private void Movement()
+    private void SetRotation()
+    {
+        transform.rotation = Quaternion.Lerp(transform.rotation, GetDesiredTransform(), model.RotationLerpValue * Time.deltaTime);
+    }
+    private Quaternion GetDesiredTransform()
+    {
+        Vector3 CamForward = GameModel.Instance.camera.transform.forward;
+        Vector3 CamRight = GameModel.Instance.camera.transform.right;
+        CamForward.y = 0;
+        CamForward = CamForward.normalized;
+        Vector3 newup = Vector3.Cross(CamForward, CamRight);
+        Quaternion returnvalue = Quaternion.LookRotation(CamForward, newup);
+        return returnvalue;
+    }
+    private void EskiMovement()
     {
         Vector2 speed = Time.deltaTime * model.MaxSpeed * Vector2.SmoothDamp(model.CurrentMove, model.NewMoveInput, ref model.CurrentMove, model.SmoothTime, 10);
 

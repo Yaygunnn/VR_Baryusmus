@@ -175,6 +175,7 @@ MonoBehaviour:
   CurrentMove: {x: 0, y: 0}
   NewMoveInput: {x: 0, y: 0}
   CameraLocation: {fileID: 5929688226418456226}
+  RotationLerpValue: 20
 --- !u!143 &4157192704177608970
 CharacterController:
   m_ObjectHideFlags: 0

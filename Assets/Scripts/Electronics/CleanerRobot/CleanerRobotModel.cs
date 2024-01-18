@@ -15,4 +15,6 @@ public class CleanerRobotModel : MonoBehaviour
     [HideInInspector] public Vector2 NewMoveInput;
 
     [SerializeField] public Transform CameraLocation;
+
+    [SerializeField] public float RotationLerpValue;
 }
