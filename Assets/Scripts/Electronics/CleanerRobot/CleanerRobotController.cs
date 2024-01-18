@@ -48,7 +48,8 @@ public class CleanerRobotController : BaseElectronicController
     public override void TakenControl()
     {
         base.TakenControl();
-        CameratransformManagement();
+        CameraLocationSeter.SetNewCameraTransformObject(model.CameraLocation.gameObject);
+        //CameratransformManagement();
     }
 
     private void CameratransformManagement()

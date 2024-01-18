@@ -15,11 +15,11 @@ public class BaseCameraController : BaseElectronicController
     }
     public override void TakenControl()
     {
-        //GetComponent<Renderer>().enabled = false;
 
-        TeleportPlayer(this.transform);
+        CameraLocationSeter.SetNewCameraTransformObject(gameObject);
+        //TeleportPlayer(this.transform);
         
-        //SetCameraTransform();
+        
     }
 
     public override void LostControl()
@@ -27,12 +27,7 @@ public class BaseCameraController : BaseElectronicController
         //GetComponent<Renderer>().enabled = true;
     }
 
-    private void SetCameraTransform()// keyboard mouse
-    {
-        Camera camera = Camera.main;
-        camera.transform.position = this.transform.position;
-        camera.transform.rotation = this.transform.rotation;
-    }
+
 
     
     public override void MouseMovementX(float mouseX)

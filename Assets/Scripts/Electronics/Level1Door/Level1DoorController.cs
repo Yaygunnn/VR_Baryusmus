@@ -14,7 +14,8 @@ public class Level1DoorController : BaseElectronicController
     public override void TakenControl()
     {
         base.TakenControl();
-        TeleportPlayer(model.level2DoorCameraTeleportLocation);
+        CameraLocationSeter.SetNewCameraTransformObject(model.level2DoorCameraTeleportLocation);
+        //TeleportPlayer(model.level2DoorCameraTeleportLocation);
 
         FireLevel2StartedAction();
     }

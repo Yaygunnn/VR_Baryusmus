@@ -20,7 +20,8 @@ public class PuzzleRoomController : MonoBehaviour
     private void PuzzleModOpen()
     {
         //ShaderOpen.Instance.OpenShaderMode();
-        TeleportPlayer();
+        //TeleportPlayer();
+        CameraLocationSeter.SetNewCameraTransformObject(model.PlayerTeleportLocation.gameObject);
     }
 
     private void UniteWithGameMod()

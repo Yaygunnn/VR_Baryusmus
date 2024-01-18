@@ -14,6 +14,7 @@ public class GameFactory : MonoBehaviour
     [SerializeField] private ElectCalculateController electCalculateController;
     [SerializeField] private Camera PlayerCamera;
     
+    
     void Awake()
     {
         //inputScript.SpaceAction = ElectronicManagerController.Instance.ChangeToARandomElectronic;
@@ -25,7 +26,8 @@ public class GameFactory : MonoBehaviour
         GameModel.Instance.SetValues(Player, PlayerCamera);
         HackReady.Instance.vR_InputReciever = vR_InputReciever;
 
-
+        CameraLocationSeter.Player = Player;
+        CameraLocationSeter.Camera = PlayerCamera;
 
         InputChangeManage();
 

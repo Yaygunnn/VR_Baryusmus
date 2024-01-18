@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Level1DoorModel : MonoBehaviour
 {
-    public Transform level2DoorCameraTeleportLocation;
+    public GameObject level2DoorCameraTeleportLocation;
 
     public Action Level2StartedAction;
 }
