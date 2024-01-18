@@ -11,7 +11,7 @@ PrefabInstance:
     - target: {fileID: 2071046473940510719, guid: 4288bfd8b1e39c54e938c29eee2bc0ec, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e563d2611df3e984e92203420188c3ee, type: 2}
+      objectReference: {fileID: 2100000, guid: d0f0843c6ac55d04887d08ae26e5289f, type: 2}
     - target: {fileID: 2071046475048890980, guid: 4288bfd8b1e39c54e938c29eee2bc0ec, type: 3}
       propertyPath: m_Name
       value: PuzzleKey

@@ -21,6 +21,7 @@ public class PuzzleRoomController : MonoBehaviour
     {
         //ShaderOpen.Instance.OpenShaderMode();
         //TeleportPlayer();
+        CameraShaderChanger.Instance.InPuzzleRoomMode();
         CameraLocationSeter.SetNewCameraTransformObject(model.PlayerTeleportLocation.gameObject);
     }
 
@@ -39,5 +40,6 @@ public class PuzzleRoomController : MonoBehaviour
     private void ClosePuzzleRoom()
     {
         Debug.Log("PuzzleRoomKapat");
+        CameraShaderChanger.Instance.OutPuzzleRoomMode();
     }
 }
