@@ -13,6 +13,7 @@ public class GameFactory : MonoBehaviour
     [SerializeField] private GameObject Player;
     [SerializeField] private ElectCalculateController electCalculateController;
     [SerializeField] private Camera PlayerCamera;
+    [SerializeField] private VideoChanger videoChanger;
     
     
     void Awake()
@@ -28,6 +29,9 @@ public class GameFactory : MonoBehaviour
 
         CameraLocationSeter.Player = Player;
         CameraLocationSeter.Camera = PlayerCamera;
+
+        GameMod.Instance.PuzzleModStart += videoChanger.StartHackVideo;
+        GameMod.Instance.PuzzleModEnd += videoChanger.StartSuccessVideo;
 
         InputChangeManage();
 
