@@ -24,7 +24,6 @@ public class PuzzleKeyDragable : BasePuzzleDragable
         {
             PuzzleSuccessor.CallSucces.PuzzleSuccess();
             Achieved = true;
-            ShaderOpen.Instance.CloseShaderMode();
         }
     }
     private void ControlSuccess(float value)

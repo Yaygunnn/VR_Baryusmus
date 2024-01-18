@@ -1839,7 +1839,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &72894922
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9273,6 +9273,7 @@ MonoBehaviour:
   Player: {fileID: 2096380775}
   electCalculateController: {fileID: 313224687}
   PlayerCamera: {fileID: 1777748007}
+  videoChanger: {fileID: 1481477349}
 --- !u!114 &467384527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24512,8 +24513,8 @@ Canvas:
   m_GameObject: {fileID: 1353534521}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 1777748007}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1

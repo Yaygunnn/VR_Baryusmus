@@ -27,11 +27,17 @@ public class PuzzleRoomController : MonoBehaviour
     private void UniteWithGameMod()
     {
         GameMod.Instance.PuzzleModStart += PuzzleModOpen;
+        GameMod.Instance.PuzzleModEnd += ClosePuzzleRoom;
     }
 
     private void TeleportPlayer()
     {
         model.Player.transform.position = model.PlayerTeleportLocation.position;
         model.Player.transform.rotation=model.PlayerTeleportLocation.rotation;
+    }
+
+    private void ClosePuzzleRoom()
+    {
+        Debug.Log("PuzzleRoomKapat");
     }
 }
