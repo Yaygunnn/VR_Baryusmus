@@ -14,7 +14,7 @@ public class EndGameScript : MonoBehaviour
         if(other.gameObject.GetComponent<BaseElectronicController>() != null)
         {
             Debug.Log("EndGame");
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(3);
         }
     }
 }
