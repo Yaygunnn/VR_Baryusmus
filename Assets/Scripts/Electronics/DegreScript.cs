@@ -41,12 +41,12 @@ public class DegreScript : MonoBehaviour, IDegreElectronic
 
     private void FindAScale(float degre)
     {
-        float a = (360 - degre*10) / 360;
+        float a = (360 - degre*5) / 360;
         SetScale(a);
     }
     private void SetScale(float fscale)
     {
-        transform.localScale = new Vector3(fscale, fscale, fscale) / 2;
+        transform.localScale = new Vector3(fscale, fscale, fscale) / 3;
     }
 
     private void ChangeColorToRed()

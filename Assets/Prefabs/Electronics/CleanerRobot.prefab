@@ -169,7 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterController: {fileID: 4157192704177608970}
-  MaxSpeed: 15
+  MaxSpeed: 7
   SmoothTime: 2
   CurrentMove: {x: 0, y: 0}
   NewMoveInput: {x: 0, y: 0}

@@ -64,7 +64,7 @@ public class VideoChanger : MonoBehaviour
     }
     private void OpenCanvas()
     {
-        VideoCanvas.SetActive(true);
+        //VideoCanvas.SetActive(true);
     }
     private void GetSuccessVideo()
     {
