@@ -18,6 +18,7 @@ public class CleanerRobotController : BaseElectronicController
     {
         //EskiMovement();
         SetRotation();
+        d1Movement();
     }
 
     private void SetRotation()
@@ -33,6 +34,26 @@ public class CleanerRobotController : BaseElectronicController
         Vector3 newup = Vector3.Cross(CamForward, CamRight);
         Quaternion returnvalue = Quaternion.LookRotation(CamForward, newup);
         return returnvalue;
+    }
+
+    private void d1Movement()
+    {
+        Vector2 speed = Time.deltaTime * model.MaxSpeed * Vector2.SmoothDamp(model.CurrentMove, model.NewMoveInput, ref model.CurrentMove, model.SmoothTime, 10);
+
+        speed.x = 0;
+        
+
+
+        Vector3 forward = transform.forward;
+        forward.y = 0;
+
+
+
+        Vector3 pos = forward * speed.y;
+
+        model.characterController.Move(pos);
+
+
     }
     private void EskiMovement()
     {
