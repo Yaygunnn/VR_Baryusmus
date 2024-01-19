@@ -811,7 +811,7 @@ MonoBehaviour:
     x: 1
     y: 2
     IsHorizontal: 1
-  puzzleCollection: {fileID: 11400000, guid: 5d5d5742ce5cc6d4f8077e69ef143335, type: 2}
+  puzzleCollection: {fileID: 11400000, guid: 86d5f4fc6d828a543bb493b86dfd6820, type: 2}
 --- !u!114 &6613941415116178030
 MonoBehaviour:
   m_ObjectHideFlags: 0

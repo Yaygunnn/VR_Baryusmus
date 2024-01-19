@@ -177,6 +177,9 @@ MonoBehaviour:
   RotationLerpValue: 1
   BeingController: 0
   StartPos: {x: 0, y: 0, z: 0}
+  TravelDistance: 1
+  GoForward: 0
+  TravlSpeed: 0.4
 --- !u!143 &4157192704177608970
 CharacterController:
   m_ObjectHideFlags: 0
