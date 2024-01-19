@@ -1,20 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class EndGameScript : MonoBehaviour
+public class GameEndScript : MonoBehaviour
 {
-   
-    
-
+    private BaseElectronicController electronic;
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.GetComponent<BaseElectronicController>() != null)
+        electronic = other.GetComponent<BaseElectronicController>();
+        if(electronic != null)
         {
-            Debug.Log("EndGame");
             SceneManager.LoadScene(3);
         }
+
     }
 }

@@ -8826,7 +8826,6 @@ GameObject:
   - component: {fileID: 467384529}
   - component: {fileID: 467384527}
   - component: {fileID: 467384526}
-  - component: {fileID: 467384525}
   - component: {fileID: 467384524}
   - component: {fileID: 467384523}
   m_Layer: 0
@@ -8882,18 +8881,6 @@ MonoBehaviour:
   ThumbStick: {x: 0, y: 0}
   RightTriggerButton: {fileID: 83097790271614945, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   LeftTriggerButton: {fileID: -5982496924579745919, guid: c348712bda248c246b8c49b3db54643f, type: 3}
---- !u!114 &467384525
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 467384522}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 303831c3dfda22e4aa7d0b1320f6ab3f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &467384526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15415,7 +15402,7 @@ GameObject:
   - component: {fileID: 824322829}
   - component: {fileID: 824322828}
   - component: {fileID: 824322827}
-  - component: {fileID: 824322826}
+  - component: {fileID: 824322831}
   m_Layer: 6
   m_Name: EndGameTrigger
   m_TagString: Untagged
@@ -15423,18 +15410,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &824322826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 824322825}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bec64c8c362f6b449411458d0d0d16d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &824322827
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15521,6 +15496,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &824322831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 824322825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66e4e3b39c034d740b9ec2c8bcc56b96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &825026832
 PrefabInstance:
   m_ObjectHideFlags: 0
