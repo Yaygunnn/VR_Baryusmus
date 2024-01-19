@@ -9,11 +9,14 @@ EditorBuildSettings:
     path: Assets/Scenes/StartMenu.unity
     guid: f7d3be74e35ac9048a4f18c148c61054
   - enabled: 1
+    path: Assets/Scenes/BeginningScene.unity
+    guid: 84c4faf30f4614e49ad8a98b3e6f0581
+  - enabled: 1
     path: Assets/Scenes/Level+Env.unity
     guid: e1f1e004c9d104544b9dfb0e1201073d
   - enabled: 1
-    path: Assets/Scenes/EndGameScene.unity
-    guid: 1220ac518f41f68409eebd4df0a2dbf0
+    path: Assets/Scenes/EndingScene.unity
+    guid: 6f3f700b7d1f2b245a713f5cb86a9d17
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: ca33ec2618da87744acdfe451a310bec, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 468fc2315f95e77448f44551a56ce129, type: 2}
