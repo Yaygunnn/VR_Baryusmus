@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BaseCameraController : BaseElectronicController
 {
+    [SerializeField] private BaseCameraModel model;
     private void Start()
     {
         base.Start();
@@ -17,8 +18,8 @@ public class BaseCameraController : BaseElectronicController
     {
 
         CameraLocationSeter.SetNewCameraTransformObject(gameObject);
-        //TeleportPlayer(this.transform);
-        
+
+        ElectronicUIChanger.Instance.OpenCameraUI(model);
         
     }
 

@@ -350,6 +350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea84dbb2b0b034a428887290c18ee3d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  model: {fileID: 8773897024161361851}
 --- !u!114 &8773897024161361851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -362,6 +363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fa05a56802f428458e06ecba8d594a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CameraName: Security Cam
 --- !u!114 &-5523723730604585359
 MonoBehaviour:
   m_ObjectHideFlags: 0

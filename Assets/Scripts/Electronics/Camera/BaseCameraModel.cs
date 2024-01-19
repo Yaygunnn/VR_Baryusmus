@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BaseCameraModel : MonoBehaviour
 {
-    
+    [SerializeField] public string CameraName;
     void Start()
     {
         

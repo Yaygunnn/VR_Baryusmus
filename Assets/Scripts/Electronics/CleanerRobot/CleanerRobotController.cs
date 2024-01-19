@@ -84,14 +84,11 @@ public class CleanerRobotController : BaseElectronicController
     {
         base.TakenControl();
         CameraLocationSeter.SetNewCameraTransformObject(model.CameraLocation.gameObject);
-        //CameratransformManagement();
+
+        ElectronicUIChanger.Instance.OpenCleanerRobotUI();
     }
 
-    private void CameratransformManagement()
-    {
-        TeleportPlayer(model.CameraLocation);
-        GameModel.Instance.Player.transform.SetParent(model.CameraLocation, true);
-    }
+    
 
     public override void LostControl()
     {
