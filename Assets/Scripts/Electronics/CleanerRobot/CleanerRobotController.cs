@@ -17,8 +17,12 @@ public class CleanerRobotController : BaseElectronicController
     void Update()
     {
         //EskiMovement();
-        SetRotation();
-        d1Movement();
+        if (model.BeingController)
+        {
+            SetRotation();
+            d1Movement();
+        }
+        
     }
 
     private void SetRotation()
@@ -76,7 +80,7 @@ public class CleanerRobotController : BaseElectronicController
     }
     public override void LeftAnalog2D(Vector2 axis) 
     {
-        Debug.Log(axis);
+        
         model.NewMoveInput = axis;
     }
 
@@ -84,14 +88,15 @@ public class CleanerRobotController : BaseElectronicController
     {
         base.TakenControl();
         CameraLocationSeter.SetNewCameraTransformObject(model.CameraLocation.gameObject);
-
-        ElectronicUIChanger.Instance.OpenCleanerRobotUI();
+        model.BeingController = true;
+        //ElectronicUIChanger.Instance.OpenCleanerRobotUI();//bozuuuk
     }
 
     
 
     public override void LostControl()
     {
+        model.BeingController = false;
         base.LostControl();
         model.NewMoveInput = new Vector2(0, 0);
         model.CurrentMove = new Vector2(0, 0);

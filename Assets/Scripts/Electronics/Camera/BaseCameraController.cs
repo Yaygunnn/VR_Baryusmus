@@ -19,7 +19,7 @@ public class BaseCameraController : BaseElectronicController
 
         CameraLocationSeter.SetNewCameraTransformObject(gameObject);
 
-        ElectronicUIChanger.Instance.OpenCameraUI(model);
+        //ElectronicUIChanger.Instance.OpenCameraUI(model);
         
     }
 

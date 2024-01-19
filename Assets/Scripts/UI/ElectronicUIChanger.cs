@@ -17,7 +17,7 @@ public class ElectronicUIChanger : MonoBehaviour
     {
         Instance = this;
 
-        GameMod.Instance.PuzzleModStart += CloseAllUI;
+        //GameMod.Instance.PuzzleModStart += CloseAllUI;
     }
 
     public void CloseAllUI()
@@ -28,14 +28,14 @@ public class ElectronicUIChanger : MonoBehaviour
     public void OpenCameraUI(BaseCameraModel baseCameraModel)
     {
         Debug.Log("Open Camera UI");
-        CloseAllUI();
-        CameraUI.SetActive(true);
+        //CloseAllUI();
+        //CameraUI.SetActive(true);
     }
 
     public void OpenCleanerRobotUI()
     {
         Debug.Log("Open Robot UI");
-        CloseAllUI();
-        CleanerRobotUI.SetActive(true);
+        //CloseAllUI();
+        //CleanerRobotUI.SetActive(true);
     }
 }

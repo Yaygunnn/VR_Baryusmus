@@ -17,4 +17,6 @@ public class CleanerRobotModel : MonoBehaviour
     [SerializeField] public Transform CameraLocation;
 
     [SerializeField] public float RotationLerpValue;
+
+    [HideInInspector] public bool BeingController;
 }
