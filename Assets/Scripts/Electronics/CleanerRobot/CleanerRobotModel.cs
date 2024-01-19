@@ -19,4 +19,16 @@ public class CleanerRobotModel : MonoBehaviour
     [SerializeField] public float RotationLerpValue;
 
     [HideInInspector] public bool BeingController;
+
+    [HideInInspector] public Vector3 StartPos;
+
+    
+
+    [HideInInspector] public float TravelDistance = 1;
+
+    [HideInInspector] public bool GoForward;
+
+    
+
+     public float TravlSpeed = 0.4f;
 }
