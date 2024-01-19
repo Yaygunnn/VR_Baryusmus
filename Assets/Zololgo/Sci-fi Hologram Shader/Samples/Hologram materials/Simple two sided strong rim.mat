@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Simple two sided strong rim
   m_Shader: {fileID: 4800000, guid: 002f6eab9ba9b994d8eec7af12c232ac, type: 3}
-  m_Parent: {fileID: 2100000, guid: b00c150bb8c6e2443b1d9b2559475832, type: 2}
+  m_Parent: {fileID: 2100000, guid: b3e2882bc33c09f4b90aca240fdc1500, type: 2}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords:
@@ -39,5 +39,4 @@ Material:
     - _RimFalloff: 1
     m_Colors:
     - _Color: {r: 0, g: 1, b: 0.7975435, a: 1}
-    - _RimColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
