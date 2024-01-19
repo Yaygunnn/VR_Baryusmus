@@ -166,89 +166,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &1187127532294038775
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8291245298807247648}
-  - component: {fileID: 4727889747206593844}
-  - component: {fileID: 524877449331257112}
-  m_Layer: 0
-  m_Name: Gosterge
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8291245298807247648
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1187127532294038775}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.618, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 6385739411391303926}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &4727889747206593844
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1187127532294038775}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &524877449331257112
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1187127532294038775}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &6385739411391303929
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,7 +179,6 @@ GameObject:
   - component: {fileID: 6385739411391303928}
   - component: {fileID: 6385739411391303925}
   - component: {fileID: 8773897024161361851}
-  - component: {fileID: -5523723730604585359}
   m_Layer: 0
   m_Name: SecurityCamera
   m_TagString: Untagged
@@ -283,8 +199,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3860842158390239010}
-  - {fileID: 8291245298807247648}
   - {fileID: 7057429864781317889}
+  - {fileID: 5539548586729663432}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -364,18 +280,69 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CameraName: Security Cam
---- !u!114 &-5523723730604585359
-MonoBehaviour:
+--- !u!1001 &3114363698906771638
+PrefabInstance:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6385739411391303926}
+    m_Modifications:
+    - target: {fileID: 7482765276287359870, guid: f4a510b72cffbd54bbe4fdf2557115ea, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7482765276287359870, guid: f4a510b72cffbd54bbe4fdf2557115ea, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7482765276287359870, guid: f4a510b72cffbd54bbe4fdf2557115ea, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7482765276287359870, guid: f4a510b72cffbd54bbe4fdf2557115ea, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7482765276287359870, guid: f4a510b72cffbd54bbe4fdf2557115ea, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7482765276287359870, guid: f4a510b72cffbd54bbe4fdf2557115ea, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7482765276287359870, guid: f4a510b72cffbd54bbe4fdf2557115ea, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7482765276287359870, guid: f4a510b72cffbd54bbe4fdf2557115ea, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7482765276287359870, guid: f4a510b72cffbd54bbe4fdf2557115ea, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7482765276287359870, guid: f4a510b72cffbd54bbe4fdf2557115ea, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7482765276287359870, guid: f4a510b72cffbd54bbe4fdf2557115ea, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9023838186528609449, guid: f4a510b72cffbd54bbe4fdf2557115ea, type: 3}
+      propertyPath: m_Name
+      value: Gosterge
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f4a510b72cffbd54bbe4fdf2557115ea, type: 3}
+--- !u!4 &5539548586729663432 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7482765276287359870, guid: f4a510b72cffbd54bbe4fdf2557115ea, type: 3}
+  m_PrefabInstance: {fileID: 3114363698906771638}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6385739411391303929}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f08d5b91668aa8d4f92fa48fc3335398, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Gosterge: {fileID: 1187127532294038775}
-  Green: {fileID: 2100000, guid: c52124ecd3fc93044bfb6247929a7ff9, type: 2}
-  Red: {fileID: 2100000, guid: f6d2f9f31796df541ad2b4ff3e908adf, type: 2}

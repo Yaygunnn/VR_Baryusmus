@@ -72,7 +72,7 @@ public class ElectCalculateController : MonoBehaviour
             else
             {
                 degre = CalculateDegreBetweenVectors(CalculateHeadToElectronicVector(electronicDevice));
-                IDegreElectronic iDegreElectronic = electronicDevice.GetComponent<IDegreElectronic>();
+                IDegreElectronic iDegreElectronic = electronicDevice.GetComponentInChildren<IDegreElectronic>();
                 if (iDegreElectronic != null)
                 {
                     iDegreElectronic.DegreIs(degre);
@@ -90,7 +90,7 @@ public class ElectCalculateController : MonoBehaviour
         if (mindegre < model.MinNecessaryDegre)
         {
             //Debug.Log("Min degre is " + mindegre + "Necessery min is " + model.MinNecessaryDegre);
-            IDegreElectronic iDegreElectronic = minElectronicDevice.GetComponent<IDegreElectronic>();
+            IDegreElectronic iDegreElectronic = minElectronicDevice.GetComponentInChildren<IDegreElectronic>();
             if (iDegreElectronic != null)
             {
                 iDegreElectronic.InHackDegre();
@@ -134,7 +134,7 @@ public class ElectCalculateController : MonoBehaviour
 
     private void HideCurrentElectronicRenderer()
     {
-        IDegreElectronic iDegreElectronic = model.CurrentElectronicController.GetComponent<IDegreElectronic>();
+        IDegreElectronic iDegreElectronic = model.CurrentElectronicController.GetComponentInChildren<IDegreElectronic>();
         if (iDegreElectronic != null)
         {
             iDegreElectronic.Hide();

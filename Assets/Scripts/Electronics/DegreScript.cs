@@ -9,16 +9,19 @@ public class DegreScript : MonoBehaviour, IDegreElectronic
 
     [SerializeField] private Material Green;
 
+    [SerializeField] private Material Blue;
+
     [SerializeField] private Material Red;
     private void Start()
     {
-        renderer = Gosterge.GetComponent<Renderer>();
+        //renderer = Gosterge.GetComponent<Renderer>();
+        renderer = GetComponent<Renderer>();
     }
     public void DegreIs(float degre)
     {
         FindAScale(degre);
         Show();
-        ChangeColorToRed();
+        ChangeColorToBlue();
     }
 
     public void InHackDegre()
@@ -27,6 +30,10 @@ public class DegreScript : MonoBehaviour, IDegreElectronic
         ChangeColorToGreen();
     }
 
+    public void OutOfDistance()
+    {
+        ChangeColorToRed();
+    }
     public void Hide()
     {
         hide();
@@ -39,12 +46,16 @@ public class DegreScript : MonoBehaviour, IDegreElectronic
     }
     private void SetScale(float fscale)
     {
-        Gosterge.transform.localScale=new Vector3 (fscale, fscale, fscale);
+        transform.localScale = new Vector3(fscale, fscale, fscale) / 2;
     }
 
     private void ChangeColorToRed()
     {
         renderer.material = Red;
+    }
+    private void ChangeColorToBlue()
+    {
+        renderer.material = Blue;
     }
 
     private void ChangeColorToGreen()
