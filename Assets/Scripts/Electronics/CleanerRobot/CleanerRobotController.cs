@@ -11,6 +11,7 @@ public class CleanerRobotController : BaseElectronicController
     private void Start()
     {
         base.Start();
+        model.StartPos=transform.position;
     }
 
     
@@ -22,9 +23,36 @@ public class CleanerRobotController : BaseElectronicController
             SetRotation();
             d1Movement();
         }
+        else
+        {
+            UnControlledTravel();
+        }
         
     }
 
+    private void UnControlledTravel()
+    {
+        if (model.GoForward)
+        {
+           
+            MoveTo(model.StartPos+model.TravelDistance*transform.forward);
+        }
+        else
+        {
+            MoveTo(model.StartPos - model.TravelDistance * transform.forward);
+        }
+    }
+
+    private void MoveTo(Vector3 gopos)
+    {
+        Vector3 Surat = gopos - transform.position;
+        if(Surat.magnitude>model.TravlSpeed * Time.deltaTime)
+        {
+            Surat = Surat.normalized * model.TravlSpeed;
+        }
+        else { model.GoForward = !model.GoForward; }
+        model.characterController.Move(Surat * Time.deltaTime);
+    }
     private void SetRotation()
     {
         transform.rotation = Quaternion.Lerp(transform.rotation, GetDesiredTransform(), model.RotationLerpValue * Time.deltaTime);
