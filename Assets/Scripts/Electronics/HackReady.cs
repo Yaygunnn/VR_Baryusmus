@@ -48,13 +48,21 @@ public class HackReady: IPuzzleSuccess
         {
             if(HackIsReady)
             {
-        
-                GameMod.Instance.OpenPuzzle();
-                PuzzleSuccessor.CallSucces = this;
+                HackStartAnim.Instance.HackAnimStart(HackableElectronic);
+
             }
         }
     }
 
-    
+    private void StartHackAnim()
+    {
+        Debug.Log("VideoGir");
+    }
+
+    public void Hack()
+    {
+        GameMod.Instance.OpenPuzzle();
+        PuzzleSuccessor.CallSucces = this;
+    }
     
 }

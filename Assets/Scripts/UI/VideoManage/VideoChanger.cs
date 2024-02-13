@@ -9,12 +9,23 @@ public class VideoChanger : MonoBehaviour
     [SerializeField] VideoClip SuccessVideo;
     [SerializeField] VideoPlayer videoPlayer;
     [SerializeField] GameObject VideoCanvas;
+    private bool IsCurrentVideoSucces;
     
     void Start()
     {
     }
 
-    // Update is called once per frame
+    private void OnEnable()
+    {
+        EventHub.Ev_StartHackStartVideo += StartHackVideo;
+        EventHub.Ev_StartPuzzleSuccessVideo += StartSuccessVideo;
+    }
+
+    private void OnDisable()
+    {
+        EventHub.Ev_StartHackStartVideo += StartHackVideo;
+        EventHub.Ev_StartPuzzleSuccessVideo += StartSuccessVideo;
+    }
     void Update()
     {
         if(Input.GetKeyUp(KeyCode.Space))
@@ -32,6 +43,7 @@ public class VideoChanger : MonoBehaviour
 
     public void StartHackVideo()
     {
+        IsCurrentVideoSucces = false;
         Debug.Log("StartHackVideo");
         GetRandomVideo();
         videoPlayer.Play();
@@ -44,6 +56,7 @@ public class VideoChanger : MonoBehaviour
     
     public void StartSuccessVideo()
     {
+        IsCurrentVideoSucces = true;
         GetSuccessVideo();
         videoPlayer.Play();
         OpenCanvasLate();
@@ -64,7 +77,7 @@ public class VideoChanger : MonoBehaviour
     }
     private void OpenCanvas()
     {
-        //VideoCanvas.SetActive(true);
+        VideoCanvas.SetActive(true);
     }
     private void GetSuccessVideo()
     {
@@ -77,5 +90,18 @@ public class VideoChanger : MonoBehaviour
         videoPlayer.Stop();
         VideoCanvas.SetActive(false);
         
+        FireVideoEndEvent();
+    }
+
+    private void FireVideoEndEvent()
+    {
+        if(IsCurrentVideoSucces)
+        {
+            EventHub.FireEndPuzzleSuccessVideo();
+        }
+        else
+        {
+            EventHub.FireEndHackStartVideo();
+        }
     }
 }

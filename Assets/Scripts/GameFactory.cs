@@ -30,8 +30,6 @@ public class GameFactory : MonoBehaviour
         CameraLocationSeter.Player = Player;
         CameraLocationSeter.Camera = PlayerCamera;
 
-        GameMod.Instance.PuzzleModStart += videoChanger.StartHackVideo;
-        GameMod.Instance.PuzzleModEnd += videoChanger.StartSuccessVideo;
 
         InputChangeManage();
 
