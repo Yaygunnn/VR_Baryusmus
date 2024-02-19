@@ -25,7 +25,7 @@ public class GameFactory : MonoBehaviour
         puzzleRoomModel.Player = Player;
         ElectronicManagerController.Instance.SetElectCalculateController(electCalculateController);
         GameModel.Instance.SetValues(Player, PlayerCamera);
-        HackReady.Instance.vR_InputReciever = vR_InputReciever;
+        
 
         CameraLocationSeter.Player = Player;
         CameraLocationSeter.Camera = PlayerCamera;
