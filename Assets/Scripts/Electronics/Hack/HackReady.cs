@@ -19,54 +19,45 @@ public class HackReady: IPuzzleSuccess
         }
     }
 
-    private bool HackIsReady;
-
-    private bool IsHacking;
-
-    private BaseElectronicController HackableElectronic;
-
-    private BaseElectronicController SelectedElectronic;
-
-    public VR_InputReciever vR_InputReciever;
+    private HackReadyModel model=new HackReadyModel();
 
     public void PuzzleSuccess()
     {
-        ElectronicManagerController.Instance.TakeControlOfANewElectronicDevice(SelectedElectronic);
+        ElectronicManagerController.Instance.TakeControlOfANewElectronicDevice(model.SelectedElectronic);
         GameMod.Instance.EndPuzzle();
-        IsHacking = false;
+        model.IsHacking = false;
     }
     public void CanHack(BaseElectronicController ElectronicDevice)
     {
-        if (IsHacking)
+        if (model.IsHacking)
         {
             return;
         }
-        HackIsReady = true;
-        HackableElectronic = ElectronicDevice;
+        model.HackIsReady = true;
+        model.HackableElectronic = ElectronicDevice;
     }
 
     public void CannotHack()
     {
-        if(IsHacking)
+        if(model.IsHacking)
         {
             return;
         }
-        HackIsReady = false;
-        HackableElectronic = null;
+        model.HackIsReady = false;
+        model.HackableElectronic = null;
     }
 
     public void TryStartHack()
     {
         if (GameMod.Instance.e_GameMod == E_GameMod.Electronic)
         {
-            if(HackIsReady)
+            if(model.HackIsReady)
             {
-                if(!IsHacking)
+                if(!model.IsHacking)
                 {
-                    IsHacking = true;
-                    HackStartAnim.Instance.HackAnimStart(HackableElectronic);
-                    Debug.Log(HackableElectronic);
-                    SelectedElectronic = HackableElectronic;
+                    model.IsHacking = true;
+                    HackStartAnim.Instance.HackAnimStart(model.HackableElectronic);
+                    model.SelectedElectronic = model.HackableElectronic;
                 }
             }
         }
