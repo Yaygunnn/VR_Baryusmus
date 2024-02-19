@@ -12,10 +12,10 @@ public class CameraShaderChanger : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        cam = GetComponent<Camera>();
     }
     void Start()
     {
-        cam = GetComponent<Camera>();
         baseColor = cam.backgroundColor;
     }
 
